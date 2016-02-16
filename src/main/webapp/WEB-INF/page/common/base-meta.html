@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head th:fragment="meta">
+<!-- 基本的meta-data -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="_ctx" th:content="${#httpServletRequest.getContextPath()}" />
+<link rel="shortcut icon" th:href="@{/static/image/favicon.ico}" />
+</head>
+</html>
