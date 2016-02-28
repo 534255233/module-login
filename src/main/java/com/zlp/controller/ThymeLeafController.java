@@ -17,12 +17,4 @@ public class ThymeLeafController {
 		return "one";
 	}
 	
-	@RequestMapping("/to/login")
-	public String toLogin(Model model, HttpServletRequest request) {
-		System.out.println("login!");
-//		model.addAttribute("welcome", "张三");
-//		request.setAttribute("welcome", "李四");
-		model.addAttribute("url", "dynamic");
-		return "login";
-	}
 }

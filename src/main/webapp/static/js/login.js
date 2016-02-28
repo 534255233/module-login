@@ -48,7 +48,7 @@ $(function($) {
 		
 //		encryptedPasswd.re
 		
-		$.post(_ctx+'/login/'+acc+'/'+encryptedPasswd, {}, function(response) {
+		$.post(_ctx+'/login/'+acc+'/'+encryptedPasswd, {}, function(response, status, xhr) {
 			$('#progress-bar').css('display', 'none');
 			$('#login-btn').css('display', 'inline-block');
 			$('#progress-bar').children('div').removeClass('active');
@@ -59,6 +59,8 @@ $(function($) {
 			} else {
 //				window.location = '/zhoulp/weixin/promote/manage';
 			}
+			sessionStorage.setItem('token', xhr.getResponseHeader('token'));
+			console.log(sessionStorage.getItem('token'));
 		}, 'json');
 		
 	});
